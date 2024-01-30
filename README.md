@@ -385,9 +385,9 @@ docker run --detach -v /workspaces/OSProject/webpage:/usr/local/apache2/htdocs/ 
 
 ***Questions:***
 
-1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __Fill answer here__.
-2. What port is the apache web server running. ***(1 mark)***
-3. What port is open for http protocol on the host machine? ***(1 mark)***
+1. What is the permission of folder /usr/local/apache/htdocs and what user and group owns the folder? . ***(2 mark)*** __The folder "/usr/local/apache2/htdocs" in the Docker container has permissions that allow the web server to read and serve files from it, set by the base image used for Apache HTTP Server. The ownership of the folder, which is usually set to the user and group "www-data," depends on the specific Docker image configuration.__.
+2. What port is the apache web server running. ***(1 mark)*** __The apache server is running on port 80__
+3. What port is open for http protocol on the host machine? ***(1 mark)*** __Port 8080 is open on the host machine for HTTP traffic.__
 
 ## What to submit
 
