@@ -332,8 +332,8 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
-2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
+1. Are files in the container persistent. Why not?. ***(1 mark)*** __Files within a Docker container are generally not meant to be persistent by default. When you start a container, Docker creates a writable layer on top of the image's file system, allowing changes to be made during the container's runtime. However, these changes are not automatically persisted when the container is stopped or removed.__.
+2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Yes, multiple instances of Debian Linux or any other Docker container can be run simultaneously. Each instance of a container is isolated from the others, and Docker manages their execution independently. Each container has its own file system, network, and process space.__.
 
 ## Running your own container with persistent storage
 
@@ -352,8 +352,12 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Test__.
-2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __@FayyadhRashidi ➜ /workspaces/OSProject/myroot (main) $ ls -ld
+drwxrwxrwx+ 2 codespace codespace 4096 Jan 31 14:41 .__.
+2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)*** __@FayyadhRashidi ➜ /workspaces/OSProject/myroot (main) $ ls -l /workspaces/OSProject/myroot
+total 0
+@FayyadhRashidi ➜ /workspaces/OSProject/myroot (main) $ sudo chown -R codespace:codespace myroot
+chown: cannot access 'myroot': No such file or directory__
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace myroot
