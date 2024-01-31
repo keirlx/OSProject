@@ -268,7 +268,7 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5235.0 avail Mem
 10. Run the command **uname -a**. ***(1 mark)*** __Linux codespaces-28b8b4 6.2.0-1018-azure #18~22.04.1-Ubuntu SMP Tue Nov 21 19:25:02 UTC 2023 x86_64 x86_64 x86_64 GNU/Linux__.
 11. What is the available free memory in the system. ***(1 mark)*** __191Mi__.
 12. What is the available disk space mounted on /workspace. ***(1 mark)*** __4.8Gi__.
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __AMD EPYC 7763 64-Core Processor__.
+13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** __The version of the Linux virtual environment is 6.2.0-1018-azure and the hardware architecture is x86_64__.
 14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** __ls is command to only list the names of files and directories while ls -asl povides more detailed listing of the files and directories__.
 15. What is the TLB size of the Virtual CPU. ***(1 mark)*** __2560 4K pages__.
 16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** __3076.907 MHz__.
