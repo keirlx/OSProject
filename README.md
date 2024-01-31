@@ -24,8 +24,8 @@ Team Mates:
 
 ***Questions:***
 
-1. What is the link of the fork OSProject in your repository. ***(1 mark)*** __https://github.com/keirlx/OSProject.git__.
-2. How many files and folders are in this repository. ***(1 mark)*** __2 folders; images and webpage, with total of 8 files from the folders included readme file__.
+1. What is the link of the fork OSProject in your repository. ***(1 mark)*** __https://github.com/keirlx/OSProject/blob/main/README.md__.
+2. How many files and folders are in this repository. ***(1 mark)*** __2 folders; images and webpage, with total of 8 files__.
 
 
 ## Exploring github codespaces
@@ -317,6 +317,7 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 @joeynor ➜ /workspaces/OSProject (main) $ docker restart romantic_jackson
 ```
+Yes, if the container is stop using docker stop and then restart it using docker restart, the file inside the container should still be available. The docker restart command retains the filesystem state of the container, including any changes made to files inside it. As long as we haven't removed the container, the file should still be present after the restart.
 
 7. Stop the container and delete the container. What happened to your helloworld.txt?
 
@@ -329,11 +330,14 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 @joeynor ➜ /workspaces/OSProject (main) $ docker rm romantic_jackson
 ```
+When the Docker container is stop using docker stop, the container is gracefully stopped, giving processes inside the container a chance to clean up and exit. The container remains in the "Exited" state.
 
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** __Fill answer here__.
-2. Can we run two, or three instances of debian linux? . ***(1 mark)*** __Fill answer here__.
+1. Are files in the container persistent. Why not?. ***(1 mark)***.
+   Files within a Docker container are generally not meant to be persistent by default. When you start a container, Docker creates a writable layer on top of the image's file system, allowing changes to be made     during the container's runtime. However, these changes are not automatically persisted when the container is stopped or removed.
+2. Can we run two, or three instances of debian linux? . ***(1 mark)***.
+    Yes, we can run multiple instances of Debian Linux or any other Docker container simultaneously. Each instance of a container is isolated from the others, and Docker manages their execution independently.       Each container has its own file system, network, and process space.
 
 ## Running your own container with persistent storage
 
@@ -352,7 +356,7 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** __Fill answer here__.
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** drwxrwxrwx+ 2 codespace codespace 4096 Jan 31 14:41.
 2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
